@@ -59,7 +59,7 @@ header nav ul li a {
 
 /* Hero Section */
 .hero {
-    background-image: url('hero-image.jpg');
+    background-image: url('./Assets/hero-image.png');
     background-size: cover;
     background-position: center;
     color: white;
@@ -79,15 +79,6 @@ header nav ul li a {
 
 .hero .cta-button {
     font-size: 1.1rem;
-}
-
-.hero {
-    background-image: url('hero-image.png');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    /* text-align: center; */
-    padding: 100px 20px;
 }
 
 /* Features Section */
@@ -110,7 +101,7 @@ header nav ul li a {
 }
 
 .feature img {
-    width: 80px;
+    width: 120px;
     height: 80px;
     margin-bottom: 20px;
 }
@@ -169,8 +160,8 @@ footer .social-media a {
 }
 
 footer .social-media img {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
 }
 
 footer p {
