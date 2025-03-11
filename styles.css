@@ -49,6 +49,21 @@ header nav ul li a {
     font-weight: bolder;
 }
 
+
+/* .cta-button {
+    background-color: #2744eb;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    } */
+
+/* .cta-button:hover {
+        transition: all 0.5s ease-in-out;
+        background-color: #021ba3;
+        } */
+
 .cta-button {
     background-color: #2744eb;
     color: rgb(255, 255, 255);
@@ -56,16 +71,68 @@ header nav ul li a {
     border: none;
     border-radius: 25px;
     cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    /* Remove underline from the link */
 }
 
 .cta-button:hover {
-    transition: all 0.5s ease-in-out;
     background-color: #021ba3;
+    transition: all 0.5s ease;
+    /* text-decoration: none; */
 }
+
+/* .cta-button a:focus,
+        .cta-button a:active,
+        .cta-button a:visited {
+            text-decoration: none;
+            } */
 
 /* Hero Section */
 .heroSection {
     position: relative;
+    width: 100%;
+}
+
+#more {
+    width: 100%;
+    height: 320px;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#moreContent {
+    font-size: smaller;
+    width: 40%;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: row;
+    gap: 90px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 10px;
+    color: #ededed;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.6);
+    transition: all 1s ease-in-out;
+}
+
+#moreContent:hover {
+    transform: scale(1.1);
+}
+
+#moreContent ul li {
+    text-decoration: none;
+    list-style: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .heroSection img {
@@ -94,8 +161,6 @@ header nav ul li a {
     color: #272727;
     text-align: center;
     padding: 20px 20px;
-
-
 }
 
 .hero-content {
@@ -183,14 +248,23 @@ header nav ul li a {
     text-align: center;
     border: none;
     border-radius: 15px;
-    background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(180, 202, 250));
+    background: linear-gradient(to bottom, rgba(255, 255, 255), rgba(80, 135, 255));
     margin: 0 30px;
+    transition: transform 0.4s linear;
     /* white-space: nowrap; */
 }
 
+.feature:hover {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(34, 104, 255));
+    /* padding: 25px;
+    margin: 0 25px; */
+    box-shadow: 1px 1px 10px 1px rgba(66, 66, 66, 0.753);
+    transform: scale(1.1);
+}
+
 .feature img {
-    width: 120px;
-    height: 80px;
+    width: 150px;
+    height: 100px;
     margin-bottom: 20px;
 }
 
@@ -252,6 +326,8 @@ footer .social-media a {
 footer .social-media img {
     width: 40px;
     height: 40px;
+    border: none;
+    border-radius: 25px;
 }
 
 footer p {
@@ -347,15 +423,60 @@ footer p {
         width: 25px;
         height: 25px;
     }
+
+
+
+    #more {
+        /* width: 100%; */
+        height: 320px;
+        /* position: absolute;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0);
+        text-align: center;
+        display: flex; */
+        justify-content: center;
+        align-items: flex-end;
+    }
+    
+    #moreContent {
+        font-size: xx-small;
+        width: 45%;
+        /*margin: 0 auto;
+        background-color: rgba(0, 0, 0, 0.6);
+        display: flex;
+        flex-direction: row; */
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        /* border: none;
+        border-radius: 10px;
+        color: #ededed;
+        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.6);
+        transition: all 1s ease-in-out; */
+    }
+    
+    #moreContent:hover {
+        transform: scale(1.1);
+    }
+    
+    #moreContent ul li {
+        text-decoration: none;
+        list-style: none;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+
+
 }
 
 @media screen and (max-width: 480px) {
     /* Further adjustments for very small screens */
-    /* header {
+    header {
         flex-direction: column;
         align-items: center;
         padding: 20px;
-    } */
+    }
 
     header nav ul {
         display: block;
@@ -363,9 +484,10 @@ footer p {
         /* margin-top: 2px; */
     }
 
-    /* header nav ul li {
-        margin: 10px 0;
-    } */
+    header nav ul li {
+        margin: 5px 0;
+        font-size: 10px;
+    }
 
     .hero h1 {
         font-size: 2rem;
@@ -376,7 +498,7 @@ footer p {
     }
 
     .hero .cta-button {
-        font-size: 0.9rem;
+        font-size: 0.6rem;
     }
 
     .feature h3 {
@@ -390,4 +512,25 @@ footer p {
     footer p {
         font-size: 0.8rem;
     }
+
+    #more {
+        /* width: 100%; */
+        height: 380px;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    
+    #moreContent {
+        font-size: 5px;
+        width: 55%;
+        gap: 0;
+        justify-content: center;
+        align-items: center;
+        z-index: 200;
+    }
+    
+    #moreContent:hover {
+        transform: scale(1.1);
+    }
+
 }
